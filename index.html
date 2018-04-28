@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>中华成语宝库</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script src="js/jquery.min.js"></script>
+<!-- //js -->
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="成语" content="成语" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+</head>
+	
+<body>
+<!-- header -->
+	<div class="header">
+	<div class="container">
+		<div class="header-info">
+			<div class="logo">
+				<a href="index.html"><img src="images/logo.png" alt=" " /></a>
+			</div>
+			<div class="logo-right">
+				<span class="menu"><img src="images/menu.png" alt=" "/></span>
+				<ul class="nav1">
+					<li class="cap"><a href="index.html">首页</a></li>
+					<li><a href="jielong.html">成语接龙</a></li>
+					<li><a href="chengyu.html">成语释义</a></li>
+					<li ><a href="about.html">关于本站</a></li>
+
+					<li><a href="lucky.php">试试手气</a></li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+				<!-- script for menu -->
+					<script> 
+						$( "span.menu" ).click(function() {
+						$( "ul.nav1" ).slideToggle( 300, function() {
+						 // Animation complete.
+						});
+						});
+					</script>
+				<!-- //script for menu -->
+		</div>
+	</div>
+	</div>
+<!-- header -->
+<!-- content -->
+	<div class="content">
+	<div class="container">
+		<div class="content-text">	
+			<div class="title" style="width:100%">
+				<div class="some-title">
+					<h3>成语</h3>
+				</div>
+				
+				<div class="clearfix"> </div>
+				<div class="tilte-grid">
+				<p>
+					
+					<span><label>成语</label>（chengyu,idioms）是中国汉字语言词汇中一部分定型的词组或短句。成语是中国传统文化的一大特色，有固定的结构形式和固定的说法，表示一定的意义。<br/>
+
+						成语有很大一部分是从古代相承沿用下来的，在用词方面往往不同于现代汉语，它代表了一个故事或者典故。<br/>
+
+						成语又是一种现成的话，跟习用语、谚语相近，但是也略有区别。<br/>
+
+						成语是中华文化中一颗璀璨的明珠。<br/>
+
+						本站的<label>成语接龙</label>，大部分成语都能提供大于2000条成语的接龙链，欢迎使用！
+
+					</span>
+				</p>
+				</div>
+				
+			
+				
+				
+			</div>
+			
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	</div>
+<!-- //content -->
+
+
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+	</script>
+<!-- //here ends scrolling icon -->
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>中华成语宝库-关于本站</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="js/jquery.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="成语" content="成语" />
+</head>
+<body>
+<!-- header -->
+<div class="header">
+    <div class="container">
+        <div class="header-info">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt=" " /></a>
+            </div>
+            <div class="logo-right">
+                <span class="menu"><img src="images/menu.png" alt=" "/></span>
+                <ul class="nav1">
+                    <li ><a href="index.html">首页</a></li>
+                    <li><a href="jielong.html">成语接龙</a></li>
+                    <li><a href="chengyu.html">成语释义</a></li>
+                    <li class="cap"><a href="about.html">关于本站</a></li>
+                    <li><a href="lucky.php">试试手气</a></li>
+
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+            <!-- script for menu -->
+            <script>
+                $( "span.menu" ).click(function() {
+                    $( "ul.nav1" ).slideToggle( 300, function() {
+                        // Animation complete.
+                    });
+                });
+            </script>
+            <!-- //script for menu -->
+        </div>
+    </div>
+</div>
+<!-- header -->
+<!-- content -->
+<div class="content">
+    <div class="container">
+        <div class="content-text">
+            <div class="title" style="width:100%">
+                <div class="some-title">
+                    <h3>关于本站</h3>
+                </div>
+
+                <div class="clearfix"> </div>
+                <div class="tilte-grid">
+                    <p><span sytle="font-size:20px">
+                        <label>数据说明: </label><br/>
+                        本站数据库收录了13227条常用成语，并且有拼音、解释，大部分成语有出处和例句。<br/>
+                        如果您发现有疏漏或者错误，请联系我们（tyz.xyz@qq.com），帮助我们完善成语数据库，感谢您的支持！<br/>
+
+					</span></p>
+                </div>
+
+
+                <div class="clearfix"> </div>
+                <div class="tilte-grid">
+                    <p><span sytle="font-size:20px">
+                        <label>功能用法: </label><br/>
+                        1、成语接龙： 输入成语，点击确定，等待几秒钟时间加载。目前仅支持常用成语输入，试试这些：
+                        <a target="view_window" href="jielong.html?query=海阔天空">海阔天空</a>，<a target="view_window" href="jielong.html?query=胸有成竹">胸有成竹</a>，<a target="view_window" href="jielong.html?query=志在必得">志在必得</a>
+                        <br/> <br/>
+                        2、成语释义： 输入成语，点击确定，显示释义。点击“下一个”或者“试试手气”随机选择一个成语，显示释义。试试这些：
+                        <a target="view_window" href="chengyu.html?query=情见乎辞">情见乎辞</a>，<a target="view_window" href="chengyu.html?query=路不拾遗">路不拾遗</a>，<a target="view_window" href="chengyu.html?query=大难临头">大难临头</a>
+                        <br/> <br/>
+					</span></p>
+                </div>
+
+                <div class="clearfix"> </div>
+                <div class="tilte-grid">
+                    <p><span sytle="font-size:20px">
+                        <label>接龙算法: </label><br/>
+                        采用深度优先搜索+分枝定界。搜索的时候，每一步都打乱下一个可选成语列表，引入随机性，所以每次生成的成语列表会有所区别。
+                        用成语的最大生成长度剪枝。最大生成长度，指的是以该词起始，最多可以生成多长的接龙链。 <br/>
+                        初始化，对数据库中每个成语，考察它是不是有后继，如果没有，最大生成长度就是1。
+                        再考察每个成语，如果它的后继词语列表中每个词的最大生成长度都是1，那它的最大生成长度就是2，否则，最大生成长度就是1+max(后继词表所有词的最大生成长度)。 <br/>
+                        这个过程进行不了几轮，只有2000多个词的最大生成长度不是无限大。
+                        搜索成语接龙列表时，如果当前列表加上可选词的最大生成长度小于当前最长列表，则剪枝。 <br/>
+                        剪枝思路还不完善，但在同样时间，比起直接用深度优先搜索，能生成更长的接龙。
+
+					</span></p>
+                </div>
+            </div>
+
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
